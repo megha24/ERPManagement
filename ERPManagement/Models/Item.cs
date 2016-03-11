@@ -8,12 +8,23 @@ namespace ERPManagement.Models
 {
     public class Item
     {
-        [Key]
+//        [Key]
         public int Id { get; set; }
-        [Required]
-        [MaxLength(100)]
+//        [Required]
+//        [MaxLength(100)]
         public string name { get; set; }
-        [MaxLength(100)]
+//        [MaxLength(100)]
         public string quality { get; set; }
+
+        public Item()
+        {
+            
+        }
+        public Item(int id, string name, string quality)
+        {
+            Id = id;
+            this.name = name;
+            this.quality = quality;
+        }
     }
 }
